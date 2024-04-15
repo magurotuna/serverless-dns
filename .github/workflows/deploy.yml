@@ -25,11 +25,11 @@ jobs:
           deno-version: v1.x
 
       - name: Build step
-        run: "./src/build/pre.sh"
+        run: "bash src/build/pre.sh"
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
           project: "yusuketanak-serverless-69"
-          entrypoint: "/src/server-deno.ts"
+          entrypoint: "src/server-deno.ts"
           root: ""
